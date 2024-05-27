@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package dummy_proto.v1;
+
+import "google/type/decimal.proto";
+
+service DummyService {
+  rpc DummyAction(DummyActionRequest) returns (DummyActionResponse);
+}
+
+message DummyActionRequest {
+  string dummy_str = 1;
+}
+
+message DummyActionResponse {
+  string dummy_str = 1;
+  string dummy_addition = 2;
+}
